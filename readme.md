@@ -1,8 +1,7 @@
-'''
-authors: Clément DELBARRE, Martin HUCK (crack)
+# Autors
+Clément DELBARRE, Martin HUCK
 
 version: 1.0.0
-'''
 
 # WebApp 
 
