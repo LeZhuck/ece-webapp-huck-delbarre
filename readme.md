@@ -1,7 +1,9 @@
-# Autors
-Clément DELBARRE, Martin HUCK
-
+---
+Authors: Clément DELBARRE, Martin HUCK
+title: "ECE WEB APP"
 version: 1.0.0
+---
+
 
 # WebApp 
 
