@@ -24,23 +24,26 @@ module.exports = {
         const queryParams = qs.parse(url.parse(req.url).query);
         console.log(queryParams);
 
+        res.setHeader('Content-Type', 'application/json'); 
+
         res.writeHead(200, { 'Content-Type': 'text/html' });
 
         if (path === '/') {
-            res.write('if you want to know more about Clement  type in the url /hello&name=martin else you can just replace it by your name, DON\'T forgot the url: /about');
+            res.write('if you want to know more about Clement  type in the url /hello&name=clement else you can just replace it by your name, DON\'T forgot the url: /about');
         } else if (path === '/hello' && 'name' in params){
             if (params['name'] === "clement")
                 res.write(content);
             else
                 res.write('Hello ' + params['name']);
-        }else if(path === '/about'){
-            res.setHeader('Content-Type', 'application/json');            res.end(JSON.stringify(JSONContent));
+        }else if(path === '/about'){            
             
-            //res.write(JSONContent);
+            res.end(JSON.stringify(JSONContent));            
+            
             console.log(JSONContent);
         }
         else {
-            res.writeHead(404, { 'Content-Type': 'text/html' });
+            res.write('URL not existing sorry');
+            // res.writeHead(404, {"Content-Type": "text/plain"}); NOT WORKING
         }
 
         res.end();
