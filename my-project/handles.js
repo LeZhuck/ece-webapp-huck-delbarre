@@ -10,7 +10,7 @@ const content = '<!DOCTYPE html>' +
 '        <title>TinmarBio</title>' +
 '    </head>' + 
 '    <body>' +
-'       <p>Bio de Martin: </p>' +
+'       <p>Bio de Clement: </p>' +
 '       <p>Coucou je suis un étudiant de l\'ECE et j\'aime beaucoup faire des projets perso, j\'irai très loins dans la vie !</p>' +
 '    </body>' +
 '</html>'
@@ -43,7 +43,6 @@ module.exports = {
         }
         else {
             res.write('ERROR 404: URL does not exist');
-            // res.writeHead(404, {"Content-Type": "text/plain"}); NOT WORKING
         }
 
         res.end();
