@@ -3,6 +3,7 @@ const url = require('url')
 const qs = require('querystring')
 const JSONContent = require('./content/about.json')
 
+/*
 const content = '<!DOCTYPE html>' +
     '<html>' +
     '    <head>' +
@@ -42,4 +43,17 @@ module.exports = {
         }
         res.end();
     }
+}*/
+
+module.exports = function(app){
+
+   
+
+    app.get('/login', function(req, res){
+        res.render('login', {
+            title: 'Express Login'
+        });
+    });
+
+    //other routes..
 }
