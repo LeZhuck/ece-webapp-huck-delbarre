@@ -7,7 +7,7 @@ const content = '<!DOCTYPE html>' +
 '<html>' +
 '    <head>' +
 '        <meta charset="utf-8" />' +
-'        <title>Clement Bio</title>' +
+'        <title>TinmarBio</title>' +
 '    </head>' + 
 '    <body>' +
 '       <p>Bio de Martin: </p>' +
@@ -42,7 +42,7 @@ module.exports = {
             console.log(JSONContent);
         }
         else {
-            res.write('URL not existing sorry');
+            res.write('ERROR 404: URL does not exist');
             // res.writeHead(404, {"Content-Type": "text/plain"}); NOT WORKING
         }
 
