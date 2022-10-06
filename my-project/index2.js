@@ -45,8 +45,15 @@ let db = {
         {
             id: '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d',
             timestamp: 1664835049,
-            content: 'Content of the comment.',
+            content: 'Content of the yeahhh.',
             articleId: '6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b',
+            author: 'Bob McLaren'
+        },
+        {
+            id: '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb7d',
+            timestamp: 1664835049,
+            content: 'Content of the comment.',
+            articleId: '6ec0bd7f-11c0-43da-975e-2a8ad9ebae5b',
             author: 'Bob McLaren'
         },
         // ...
@@ -86,5 +93,22 @@ app.get('/articles/:id', (req, res) => {
     const searchId = req.params.id;
     const article = db.articles.find( article => article.id === searchId)
     res.status(200).json(article)
+
+})
+
+app.get('/articles/:articleId/comments', (req, res) => {
+
+    const searchId = req.params.articleId;
+    const comm_article = db.comments.find( comm_article => comm_article.articleId === searchId)
+    res.status(200).json(comm_article)
+
+})
+
+app.get('/articles/:articleId/comments/:commentId', (req, res) => {
+
+    const searchId = req.params.articleId;
+    const commentid = req.params.commentId;
+    const comm_article = db.comments.find( comm_article => comm_article.articleId === searchId && comm_article.id ===commentid)
+    res.status(200).json(comm_article)
 
 })
