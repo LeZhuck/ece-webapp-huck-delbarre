@@ -6,6 +6,9 @@ const url = require('url')
 const qs = require('querystring')
 const JSONContent = require('./content/about.json')
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 app.listen(
     app.get('port'),
     () => console.log(`server listening on ${app.get('port')}`)
@@ -22,6 +25,7 @@ const content = '<!DOCTYPE html>' +
     '       <p>Coucou je suis un étudiant de l\'ECE et j\'aime beaucoup faire des projets perso, j\'irai très loins dans la vie !</p>' +
     '    </body>' +
     '</html>'
+
 
 let db = {
     articles: [
@@ -112,3 +116,52 @@ app.get('/articles/:articleId/comments/:commentId', (req, res) => {
     res.status(200).json(comm_article)
 
 })
+
+// To test the POST methode on POSTMAN:
+//  - select the POST methode and insert URL: http://localhost:8080/articles
+//  - then go into the "body" parameter section and select x-www-form-urlencoded
+//  - insert key value format that you want
+//  -  once done press send
+
+app.post( '/articles',  function (req, res) {
+        console.log(req.body)
+
+        Article = {
+            id: req.body.id,
+            title: req.body.title,
+            content: req.body.content,
+            date: req.body.date,
+            author: req.body.author,
+        }
+        db['articles'].push(Article)
+
+        
+    }
+)
+// To test the POST methode on POSTMAN:
+//  - select the POST methode and insert URL: http://localhost:8080/articles/:ArticleId/comments
+//  - then go into the "body" parameter section and select x-www-form-urlencoded
+//  - insert key value format that you want
+//  -  once done press send
+
+
+app.post( '/articles/:articleId/comments',  function (req, res) {
+    console.log(req.params)
+
+    const searchId = req.params.articleId
+    const article = db.articles.find( article => article.id === searchId)
+
+    Comments = {
+        id: req.body.id,
+        timestamp: req.body.timestamp,
+        content: req.body.content,
+        ArticleID: searchId,
+        author: req.body.author,
+    }
+    db['comments'].push(Comments)
+    console.log(db.comments)
+
+    
+}
+)
+
