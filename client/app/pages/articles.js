@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-export default function About() {
+export default function Artciles() {
   return (
     <div className={styles.container}>
       <Head>
@@ -10,18 +10,17 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      
         <h1 className={styles.title}>
-          Home Page
+          Articles
         </h1>
 
         <p className={styles.description}>
-          If you want to discover all available fonctionality 
-          <a href="http://localhost:3000/about" class={styles.href}> click here  </a>     
+            
         </p>
 
-       
-      </main>
+        
+      
 
      
     </div>
