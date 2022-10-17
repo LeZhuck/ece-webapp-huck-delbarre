@@ -1,10 +1,9 @@
+import { useRouter } from 'next/router'
+
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 
-
-
-let URL = "http://localhost:3000/articles/"
 
 let db = {
     articles: [
@@ -45,7 +44,54 @@ let db = {
 
 }
 
-export default function Artciles() {
+const getID = () => {
+    const router = useRouter()
+    const { id } = router.query
+
+    return id
+}
+
+const getTitle = () => {
+    const ID = getID()
+    for (let i = 0; i < db['articles'].length; i++) {
+        if (db["articles"][i].id == ID) {
+            return db["articles"][i].title
+        }
+    }
+}
+
+const getContent = () => {
+    const ID = getID()
+    for (let i = 0; i < db['articles'].length; i++) {
+        if (db["articles"][i].id == ID) {
+            return db["articles"][i].content
+        }
+    }
+}
+const getAuthor = () => {
+    const ID = getID()
+    for (let i = 0; i < db['articles'].length; i++) {
+        if (db["articles"][i].id == ID) {
+            return db["articles"][i].author
+        }
+    }
+}
+const getDate = () => {
+    const ID = getID()
+    for (let i = 0; i < db['articles'].length; i++) {
+        if (db["articles"][i].id == ID) {
+            return db["articles"][i].date
+        }
+    }
+}
+
+
+
+
+
+
+
+export default function Article() {
     return (
         <div className={styles.container}>
             <Head>
@@ -53,26 +99,23 @@ export default function Artciles() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-
-            <main className={styles.main}>
-                <h1 className={styles.title}>
-                    Our Articles
-                </h1>
-
-                <div className={styles.grid}>
-
-
-                    {db['articles'].map(articles => <a key={articles.id} href={URL + articles.id} className={styles.card} > <h2>{`${articles.title}, ${articles.date} `}</h2> </a>)}
-
-                    <p>Find all of our recent Articles</p>
+            <br>
+            </br>
+            <br>
+            </br>
+            <h2 className={styles.title}>
+                {getTitle()}
+            </h2>
+            <br>
+            </br>
 
 
-
-                </div>
-            </main>
-
-
-
+            <div >
+                <h1 className={styles.description} > Ecrit par: {getAuthor()}, le {getDate()} </h1>
+                <p className={styles.description}>
+                    {getContent()}
+                </p>
+            </div>
 
 
         </div>

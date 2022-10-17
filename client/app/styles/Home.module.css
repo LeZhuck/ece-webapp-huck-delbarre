@@ -56,6 +56,12 @@
   font-size: 1.5rem;
 }
 
+.Titreh1 {
+  
+  line-height: 1.5;
+  font-size: 2rem;
+}
+
 .code {
   background: #fafafa;
   border-radius: 5px;
