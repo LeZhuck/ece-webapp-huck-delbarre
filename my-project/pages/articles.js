@@ -1,7 +1,5 @@
-import Head from 'next/head'
 import Image from 'next/image'
-
-
+import Layout from "../Components/Layout"
 
 let URL = "http://localhost:3000/articles/"
 
@@ -46,34 +44,19 @@ let db = {
 
 export default function Artciles() {
     return (
-        <div class= "py-8">
-            <Head>
-                <title >WebApp React</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-
-
-            <main class = "px-2 flex-1 flex-col flex justify-center items-center">
-                <h1 class="m-0 leading-5 text-6xl mb-4">
+        <Layout>
+            <main class="px-2 flex-1 flex-col flex justify-center items-center mt-12 ">
+                <h1 class="m-0 leading-5 text-6xl mb-8 mt-12">
                     Our Articles
                 </h1>
 
-                <div class="flex items-center justify-center flex-wrap max-w-4xl">
-
-
-                    {db['articles'].map(articles => <a key={articles.id} href={URL + articles.id} class="m-4 p-6 text-left border-solid border-2 border-black rounded-xl ease-linear max-w-xs" > <h2>{`${articles.title}, ${articles.date} `}</h2> </a>)}
-
-                    <p>Find all of our recent Articles</p>
-
-
-
+                <div class="flex items-center justify-center flex-wrap max-w-4xl bg-gray-300 rounded-3xl" id="article">
+                    {db['articles'].map(articles => <a key={articles.id} href={URL + articles.id} class="m-4 p-6 text-left border-solid border-2 border-white rounded-xl ease-linear max-w-xs hover:bg-gray-100" > <h2>{`${articles.title}, ${articles.date} `}</h2> </a>)}
+                   
                 </div>
+                <p class="mt-4">Find all of our recent Articles</p>
             </main>
-
-
-
-
-
-        </div>
+        </Layout>
     )
 }
+
