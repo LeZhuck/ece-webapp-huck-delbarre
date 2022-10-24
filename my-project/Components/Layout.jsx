@@ -12,8 +12,8 @@ function Layout({ children }) {
         <header>
            <Navbar />
         </header>
-        <div> {children}</div>
-        <Footer />
+        <div> {children}         <Footer />
+</div>
         </div>
 
 
