@@ -4,10 +4,9 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div class = "p-6">
+    <div  className= "p-6">
       <Head>
         <title>WebApp React</title>        
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
@@ -17,7 +16,7 @@ export default function Home() {
 
         <p className={styles.description}>
           If you want to discover all available fonctionality 
-          <a href="http://localhost:3000/about" class={styles.href}> click here  </a>     
+          <a href="http://localhost:3000/about" className={styles.href}> click here  </a>     
         </p>
 
        

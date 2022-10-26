@@ -46,16 +46,16 @@ export default function Artciles() {
     return (
         <Layout>
             
-            <main class="px-2 flex-1 flex-col flex justify-center items-center mt-12 ">
-                <h1 class="m-0 leading-5 text-6xl mb-8 mt-12">
+            <main className="px-2 flex-1 flex-col flex justify-center items-center mt-12 ">
+                <h1 className="m-0 leading-5 text-6xl mb-8 mt-12">
                     Our Articles
                 </h1>
 
-                <div class="flex items-center justify-center flex-wrap max-w-4xl  rounded-3xl" id="article">
-                    {db['articles'].map(articles => <a key={articles.id} href={URL + articles.id} class="m-4 p-6 text-left rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 ease-linear max-w-xs hover:bg-sky-500 hover:ring-sky-500" > <h2>{`${articles.title}, ${articles.date} `}</h2> </a>)}
+                <div className="flex items-center justify-center flex-wrap max-w-4xl  rounded-3xl" id="article">
+                    {db['articles'].map(articles => <a key={articles.id} href={URL + articles.id} className="m-4 p-6 text-left rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 ease-linear max-w-xs hover:bg-sky-500 hover:ring-sky-500" > <h2>{`${articles.title}, ${articles.date} `}</h2> </a>)}
                    
                 </div>
-                <p class="mt-4">Find all of our recent Articles</p>
+                <p className="mt-4">Find all of our recent Articles</p>
             </main>
         </Layout>
        

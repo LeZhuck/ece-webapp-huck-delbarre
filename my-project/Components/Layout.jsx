@@ -4,10 +4,9 @@ import Head from 'next/head'
 
 function Layout({ children }) {
     return (
-        <div class= "py-8">
+        <div className= "py-8">
         <Head>
             <title >WebApp React</title>
-            <link rel="icon" href="/favicon.ico" />
         </Head>
         <header>
             <Navbar />
