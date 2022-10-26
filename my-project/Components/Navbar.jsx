@@ -9,16 +9,16 @@ function Navbar(){
             <div className="hidden items-center w-full lg:flex lg:w-auto lg:order-1 ml-20">
                 <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 ">
                     <li>
-                        <a href="/" className="block py-2 pr-4 pl-3 text-gray-700" aria-current="page">Home</a>
+                        <a href="/" className="block py-2 pr-4 pl-3 text-gray-700 hover:text-white" aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="/about" className="block py-2 pr-4 pl-3 text-gray-700">About</a>
+                        <a href="/about" className="block py-2 pr-4 pl-3 text-gray-700 hover:text-white">About</a>
                     </li>
                     <li>
-                        <a href="/contacts" className="block py-2 pr-4 pl-3 text-gray-700">Contacts</a>
+                        <a href="/contacts" className="block py-2 pr-4 pl-3 text-gray-700 hover:text-white">Contacts</a>
                     </li>
                     <li>
-                        <a href="/articles" className="block py-2 pr-4 pl-3 text-gray-700">Articles</a>
+                        <a href="/articles" className="block py-2 pr-4 pl-3 text-gray-700 hover:text-white">Articles</a>
                     </li>
                 </ul>
             </div>
