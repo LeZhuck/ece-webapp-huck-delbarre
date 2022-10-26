@@ -1,5 +1,5 @@
-import Navbar from "../Components/Navbar"
-import Footer from "../Components/Footer"
+import Navbar from "./Navbar"
+import Footer from "./Footer"
 import Head from 'next/head'
 
 function Layout({ children }) {
@@ -10,10 +10,11 @@ function Layout({ children }) {
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <header>
-           <Navbar />
+            <Navbar />
         </header>
-        <div> {children}         <Footer />
+        <div> {children}        
 </div>
+<Footer />
         </div>
 
 

@@ -45,6 +45,7 @@ let db = {
 export default function Artciles() {
     return (
         <Layout>
+            
             <main class="px-2 flex-1 flex-col flex justify-center items-center mt-12 ">
                 <h1 class="m-0 leading-5 text-6xl mb-8 mt-12">
                     Our Articles
@@ -57,6 +58,7 @@ export default function Artciles() {
                 <p class="mt-4">Find all of our recent Articles</p>
             </main>
         </Layout>
+       
     )
 }
 
