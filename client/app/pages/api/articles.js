@@ -41,5 +41,5 @@ let db = {
 
 
 export default function handler(req, res) {
-    res.status(200).json({ articles: db })
+    res.status(200).json({ articles: db.articles })
 }

@@ -2,7 +2,6 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
-  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -17,5 +16,14 @@
   "devDependencies": {
     "eslint": "8.25.0",
     "eslint-config-next": "12.3.1"
-  }
+  },
+  "browser": {
+    "crypto": false,
+    "fs": false,
+    "path": false,
+    "os": false,
+    "net": false,
+    "stream": false,
+    "tls": false
+    }
 }
