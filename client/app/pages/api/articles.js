@@ -1,50 +1,3 @@
-import { detectContentType } from 'next/dist/server/image-optimizer'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-
-
-
-let URL = "http://localhost:3000/articles/"
-
-
-
-
-
-
-export default function Artciles({ articles }) {
-    return (
-        <div className={styles.container}>
-            <Head>
-                <title>WebApp React</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-
-
-            <main className={styles.main}>
-                <h1 className={styles.title}>
-                    Our Articles
-                </h1>
-
-                <div className={styles.grid}>
-
-
-                    {articles.map(articles => <a key={articles.id} href={URL + articles.id} className={styles.card} > <h2>{`${articles.title}, ${articles.date} `}</h2> </a>)}
-
-                    <p>Find all of our recent Articles</p>
-
-
-
-                </div>
-            </main>
-
-
-
-
-
-        </div>
-    )
-}
 
 let db = {
     articles: [
@@ -85,10 +38,8 @@ let db = {
 
 }
 
-export async function getStaticProps() {
-    return {
-        props: {
-            articles: db.articles
-        }
-    }
+
+
+export default function handler(req, res) {
+    res.status(200).json({ articles: db })
 }

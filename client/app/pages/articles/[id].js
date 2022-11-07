@@ -5,6 +5,84 @@ import Image from 'next/image'
 import styles from '../../styles/Home.module.css'
 
 
+
+
+
+const getTitle = (id, db) => {
+    const ID =  id
+    for (let i = 0; i < db['articles'].length; i++) {
+        if (db["articles"][i].id == ID) {
+            return db["articles"][i].title
+        }
+    }
+}
+
+const getContent = (id, db) => {
+    const ID =  id
+    for (let i = 0; i < db['articles'].length; i++) {
+        if (db["articles"][i].id == ID) {
+            return db["articles"][i].content
+        }
+    }
+}
+const getAuthor = (id, db) => {
+    const ID =  id
+    for (let i = 0; i < db['articles'].length; i++) {
+        if (db["articles"][i].id == ID) {
+            return db["articles"][i].author
+        }
+    }
+}
+const getDate = (id,db) => {
+    const ID =  id
+    for (let i = 0; i < db['articles'].length; i++) {
+        if (db["articles"][i].id == ID) {
+            return db["articles"][i].date
+        }
+    }
+}
+
+
+
+
+
+
+
+export default function Article({db}) {
+
+    const router = useRouter()
+    const { id } = router.query
+
+    return (
+        <div className={styles.container}>
+            <Head>
+                <title>WebApp React</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+
+            <br>
+            </br>
+            <br>
+            </br>
+            <h2 className={styles.title}>
+                {getTitle(id, db)}
+            </h2>
+            <br>
+            </br>
+
+
+            <div >
+                <h1 className={styles.description} > Ecrit par: {getAuthor(id, db)}, le {getDate(id,db)} </h1>
+                <p className={styles.description}>
+                    {getContent(id,db)}
+                </p>
+            </div>
+
+
+        </div>
+    )
+}
+
 let db = {
     articles: [
         {
@@ -44,45 +122,27 @@ let db = {
 
 }
 
-const getID = () => {
-    const router = useRouter()
-    const { id } = router.query
+export async function getStaticProps() {
+    
+      
 
-    return id
-}
+        return {
+            props: {
+                db: db,
+            },
+        };
 
-const getTitle = () => {
-    const ID = getID()
-    for (let i = 0; i < db['articles'].length; i++) {
-        if (db["articles"][i].id == ID) {
-            return db["articles"][i].title
-        }
-    }
 }
 
-const getContent = () => {
-    const ID = getID()
-    for (let i = 0; i < db['articles'].length; i++) {
-        if (db["articles"][i].id == ID) {
-            return db["articles"][i].content
-        }
-    }
-}
-const getAuthor = () => {
-    const ID = getID()
-    for (let i = 0; i < db['articles'].length; i++) {
-        if (db["articles"][i].id == ID) {
-            return db["articles"][i].author
-        }
-    }
-}
-const getDate = () => {
-    const ID = getID()
-    for (let i = 0; i < db['articles'].length; i++) {
-        if (db["articles"][i].id == ID) {
-            return db["articles"][i].date
-        }
-    }
+export async function getStaticPaths() {
+
+   
+
+    const paths = db.articles.map((article) => ({
+        params: { id: article.id.toString() },
+    }))
+
+    return { paths, fallback: false }
 }
 
 
@@ -91,33 +151,3 @@ const getDate = () => {
 
 
 
-export default function Article() {
-    return (
-        <div className={styles.container}>
-            <Head>
-                <title>WebApp React</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-
-            <br>
-            </br>
-            <br>
-            </br>
-            <h2 className={styles.title}>
-                {getTitle()}
-            </h2>
-            <br>
-            </br>
-
-
-            <div >
-                <h1 className={styles.description} > Ecrit par: {getAuthor()}, le {getDate()} </h1>
-                <p className={styles.description}>
-                    {getContent()}
-                </p>
-            </div>
-
-
-        </div>
-    )
-}
