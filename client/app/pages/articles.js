@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-
+import Header from '../styles/layout/Header'
 
 let URL = "http://localhost:3000/articles/"
 
@@ -14,10 +14,8 @@ let URL = "http://localhost:3000/articles/"
 export default function Artciles({ articles }) {
     return (
         <div className={styles.container}>
-            <Head>
-                <title>WebApp React</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+            
+            <Header />
 
 
             <main className={styles.main}>

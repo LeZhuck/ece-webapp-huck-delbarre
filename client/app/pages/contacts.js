@@ -1,14 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Header from '../styles/layout/Header'
 
 export default function Contacts() {
     return (
         <div className={styles.container}>
-            <Head>
-                <title>WebApp React</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+            <Header />
+            
             <h1 className={styles.title}>
                 Contact Page
             </h1>
