@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-import Header from '../styles/layout/Header'
+import Header from '../components/Header'
 
 let URL = "http://localhost:3000/articles/"
 

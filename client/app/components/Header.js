@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../Home.module.css'
-import React, { useState, useEffect } from 'react';
+import styles from '../styles/Home.module.css'
+import React, { useState, useEffect, useContext } from 'react';
 
+import { UserContext } from './UserContext';
 
 
 let URL = "http://localhost:3000/articles/"
@@ -11,10 +12,35 @@ let URL = "http://localhost:3000/articles/"
 
 
 
-
 export default function Header() {
 
-    let [user, setUser] = useState("user");
+    
+
+    
+    const user = useContext(UserContext)
+
+    return (
+        <div>
+        <Head>
+            <title>Clement Tinmar</title>
+            <link rel="icon" href="/favicon.ico" />
+            
+        </Head>
+        <div className={styles.HeaderText}>
+                Hello {user.username} your email is {user.mail}
+        </div>
+
+        <div>
+        <form action="login-controlled">
+    <input type="submit" value="Login" />
+</form>
+        </div>
+        </div>
+    )
+}
+
+/*
+
 
     // use a useEffect funtion which fetch data from profile api et change the document title with the username and email
     useEffect(() => {
@@ -35,6 +61,7 @@ export default function Header() {
     }, [])
 
     return (
+
         <div >
         <Head>
             <title>Clement Tinmar</title>
@@ -46,11 +73,13 @@ export default function Header() {
             </div>
 
         </div>
+        
 
 
 
     )
-}
+    */
+
 
 
 

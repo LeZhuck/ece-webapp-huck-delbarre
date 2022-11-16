@@ -1,26 +1,57 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Header from '../styles/layout/Header'
+import Header from '../components/Header'
 import { useState } from 'react'
 
 
+import { UserContext } from '../components/UserContext';
 
-export default function LoginNative() {
+
+
+export default function LoginNative({Profiles}) {
 
     const [data, setData] = useState({})
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const [user, setUser] = useState({ username: "guest",
+    mail: "no mail",
+})
+       
+
+    
 
     const onSubmit = function(e) {
       e.preventDefault()
       console.log(data)
+
+      
+      for (const profile of Profiles) {
+        //console.log(el);
+        if (profile.username === username) {
+          setUser(
+            { username: username,
+            mail: profile.mail,
+        })
+          break;
+        }
+      }
+
+
+
+
     }
 
     const onChange = function(e) {
         setUsername(data.username)
         setPassword(data.password)
+
+       
+        
+    
     }
+        
+    
 
    
 
@@ -29,6 +60,7 @@ export default function LoginNative() {
 
 
   return (
+    <UserContext.Provider value={user}>
     <div className={styles.container}>
       <Header />
 
@@ -80,5 +112,18 @@ export default function LoginNative() {
 
      
     </div>
+    </UserContext.Provider>
   )
+}
+
+
+export async function getStaticProps() {
+  const res = await fetch("http://localhost:3000/api/profile");
+  const {Profiles} = await res.json();
+  console.log(Profiles);
+  return {
+      props: {
+          Profiles,
+      }
+  }
 }

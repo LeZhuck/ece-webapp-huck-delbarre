@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../../styles/Home.module.css'
 
-import Header from '../../styles/layout/Header'
+import Header from '../../components/Header'
 
 
 
@@ -84,14 +84,17 @@ export default function Article({db}) {
 
 export async function getStaticPaths() {
 
+    const res = await fetch("http://localhost:3000/api/articles");
+    const {articles} = await res.json();
+    console.log(articles);
+
+    const Paths = articles.map((article) => ({
+        params: { id: article.id.toString() },
+    }))
 
     return {
-        paths: [
-            { params: { id: '1' } },
-            { params: { id: '2' } },
-            { params: { id: '3' } },
-            { params: { id: '4' } },
-        ],
+        paths: Paths,
+
         fallback: false
     }
 }

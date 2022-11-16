@@ -2,7 +2,7 @@
 
   
 import styles from '../styles/Home.module.css'
-import Header from '../styles/layout/Header'
+import Header from '../components/Header'
 import { useState } from 'react'
 import {useForm} from 'react-hook-form'
 
