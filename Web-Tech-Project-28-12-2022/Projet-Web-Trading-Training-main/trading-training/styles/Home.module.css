@@ -1,0 +1,20 @@
+.container {
+  padding: 0;
+}
+
+.HeadHome {
+  max-height: 12vh;
+  color: #e0e0e0;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  
+}
+.footerHome {
+  height: auto;
+  width: 100%;
+  padding: 5vh;
+  color: #e0e0e0;
+
+}

@@ -1,0 +1,290 @@
+commit e8ff805d2da1c7c44c82f55785cbacc7d02bcd29
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Wed Dec 28 19:59:29 2022 +0100
+
+    fix: delete env.local
+
+commit ee3458473c4ebc92a9a53e20add3bbfc39fb5876
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Wed Dec 28 19:07:12 2022 +0100
+
+    fix: delete all console.log
+
+commit c7a50407c0c2ddbcf9c549723a7c728caa4fe733
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Wed Dec 28 18:44:01 2022 +0100
+
+    fix: account article upgrade
+
+commit 4d0d10a0f962c53c74a581401d7e991111eee730
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Wed Dec 28 17:18:34 2022 +0100
+
+    fix: final commit blog and article display upgrade
+
+commit 4805b44c7a0a7bbf8f66f08083a1186e24d63303
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Wed Dec 28 16:53:50 2022 +0100
+
+    fix: blog aspect + tags display
+
+commit 7a7023eebf53eca54e68bac5c02b3c9c849918e5
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Sun Dec 25 16:37:30 2022 +0100
+
+    fix: getServerSideProps everywhere
+
+commit 62e79b642a5889eb249faec11baedfec5be4db5d
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Sun Dec 25 16:24:39 2022 +0100
+
+    fix: getServerSideProps with Header
+
+commit 1d87434cb930c3c34d902ba07bf12a268a35b32e
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Sun Dec 25 15:39:00 2022 +0100
+
+    fix: try revalidate to delete website cache
+
+commit 9abbf50ff6853a812cde28afaf15bcc640cdd85a
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Sun Dec 25 15:37:30 2022 +0100
+
+    fix: try revalidate to delete website cache
+
+commit d9d23ae68a64031b0e0f0dc54d162b02906466d3
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Sat Dec 24 23:43:42 2022 +0100
+
+    fix: minor change but still same problem with supabase
+
+commit da063b9cdce8b7738284bfd79747f72a5aeec571
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Sat Dec 24 22:49:49 2022 +0100
+
+    fix: essaie de getServerSideProps
+
+commit c80f02368a49ce29a8cf17eab11c94ce20c39584
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Sat Dec 24 17:27:30 2022 +0100
+
+    fix: too much API request -> fixed + header
+
+commit 89e7ef065e97b2aabccdddc209f68284642b0d07
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Sat Dec 24 12:28:50 2022 +0100
+
+    fix: it's possible to comment without error
+
+commit a1280897c14525269da469c66b45305a418fa0e4
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Sat Dec 24 11:29:30 2022 +0100
+
+    fix: can't access articles from vercel  domain url but work in local
+
+commit c2d11ffd6db47f8847b33eb07bd2faf2becf2e1f
+Author: LeZhuck <101577633+LeZhuck@users.noreply.github.com>
+Date:   Sun Dec 18 22:12:18 2022 +0100
+
+    fix: error in login page
+
+commit 94972c40642373dd14b9742a9b428367f499ec4f
+Author: LeZhuck <101577633+LeZhuck@users.noreply.github.com>
+Date:   Sun Dec 18 20:23:23 2022 +0100
+
+    fix: id_articles causing error
+
+commit 91cfa891f8c5b98620ca3023ede49e92e2efb6de
+Merge: 79e4fd5 bdcbe9c
+Author: LeZhuck <101577633+LeZhuck@users.noreply.github.com>
+Date:   Sun Dec 18 00:35:11 2022 +0100
+
+    Merge branch 'main' of https://github.com/RXT-Eago/Projet-Web-Trading-Training
+
+commit 79e4fd5e051ece288284addf39aaada452365dc6
+Author: LeZhuck <101577633+LeZhuck@users.noreply.github.com>
+Date:   Sun Dec 18 00:34:26 2022 +0100
+
+    feat : color change added on the home page
+
+commit bdcbe9cb479370e3dd7dd364a00a9b432065d2c7
+Author: Clement Delbarre <58074790+RXT-Eago@users.noreply.github.com>
+Date:   Sat Dec 17 22:17:35 2022 +0100
+
+    Update README.md
+
+commit 85de9f818503aa04d29929823a34c2bf08b86d25
+Author: Clement Delbarre <58074790+RXT-Eago@users.noreply.github.com>
+Date:   Sat Dec 17 22:10:30 2022 +0100
+
+    Update README.md
+
+commit 110fbab046de6a4dcd6fac8afc48b8bb28afcaed
+Author: LeZhuck <101577633+LeZhuck@users.noreply.github.com>
+Date:   Fri Dec 16 23:53:39 2022 +0100
+
+    feat : change bugg color theme
+
+commit 38b6f4c2d4dd45cf58889788050ebb10ff45c336
+Author: LeZhuck <101577633+LeZhuck@users.noreply.github.com>
+Date:   Fri Dec 16 23:12:47 2022 +0100
+
+    feat : add change of color
+
+commit abd019730b686f1ccca75c5814c873a36c4280c8
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Fri Dec 16 20:53:09 2022 +0100
+
+    feat: display username in home page
+
+commit 3d04068b72402ab9bd46380a7b5e8336b5c97ac7
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Fri Dec 16 19:37:16 2022 +0100
+
+    fix: minor change for fetching binance data
+
+commit 795b4b1d40ae92625b560814bfcd70da10d5b391
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Fri Dec 16 19:26:10 2022 +0100
+
+    fix: minor change
+
+commit 84f23cec471937ba64dc2759a5185956bd62694b
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Fri Dec 16 18:58:53 2022 +0100
+
+    feat: able to run npm run build
+
+commit 5118038c807c8d1f2006772a408a790b9fdbb03b
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Fri Dec 16 10:58:11 2022 +0100
+
+    feat: hamburger bar for mobile or little computer screen
+
+commit 75dcdc41a427dc9a7c1b66b282e7735403b6423e
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Fri Dec 16 01:46:04 2022 +0100
+
+    fix: minor change (import problem)
+
+commit 77bdc44b460e3ae3fa5c9fa98f6ae0981a78c9be
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Fri Dec 16 01:42:27 2022 +0100
+
+    fix: minor
+
+commit 2516af4ed4d47331814e24e11b12a311e11ff627
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Fri Dec 16 01:41:33 2022 +0100
+
+    fix: Upgrade for connexion page style, change automatic email aspect, GITHUB provider working
+
+commit 59d4636ee3acd43f3bdd9a9187be287e03b1b031
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Thu Dec 15 22:08:36 2022 +0100
+
+    fix: Page home dispose des 4 dernier articles et affichage dynamique pour les blogs
+
+commit eb0649d035a4584fa7e9a0b4856fe7e6e084322b
+Author: LeZhuck <101577633+LeZhuck@users.noreply.github.com>
+Date:   Thu Dec 15 20:38:38 2022 +0100
+
+    feat : add categories to the creation of an article
+
+commit d2ef1de73ab0eaa7cac553b9d9511b58a29d95ff
+Author: LeZhuck <101577633+LeZhuck@users.noreply.github.com>
+Date:   Thu Dec 15 19:00:54 2022 +0100
+
+    feat : ajout de catégorie et tags crea article
+
+commit ab5861058892dbc886d6d7a481be31cb6072506d
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Thu Dec 15 14:21:48 2022 +0100
+
+    fix: responsive and better visualize of articles
+
+commit 35fc4054a9a4f2eeeed5f94f14db3b20715772f2
+Author: LeZhuck <101577633+LeZhuck@users.noreply.github.com>
+Date:   Thu Dec 15 13:33:48 2022 +0100
+
+    feat : gravatar ok
+
+commit 3b1e84682e8786ad973bcb50b632794fddbe7d20
+Author: LeZhuck <101577633+LeZhuck@users.noreply.github.com>
+Date:   Thu Dec 15 10:26:07 2022 +0100
+
+    feat : add email to the user
+
+commit 269aa37980ae075d884948dd30594e79baeb8fcd
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Wed Dec 14 16:54:08 2022 +0100
+
+    fix: appearance of the article when display in group
+
+commit 81b2696ec8be80461406a85d35d4323ff29692d2
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Wed Dec 14 16:07:58 2022 +0100
+
+    feat: Page home propre termine
+
+commit 6db867e88531b41f10c8ab6ff6512b159866f7d7
+Author: LeZhuck <101577633+LeZhuck@users.noreply.github.com>
+Date:   Wed Dec 14 13:51:43 2022 +0100
+
+    feat : Update Account page, user can modify his articles and delete them
+
+commit 2d298f8c6f80a296bd270ceaff3e514173d06296
+Merge: 2a65ae1 8478959
+Author: LeZhuck <101577633+LeZhuck@users.noreply.github.com>
+Date:   Tue Dec 13 22:11:46 2022 +0100
+
+    Merge branch 'main' of https://github.com/RXT-Eago/Projet-Web-Trading-Training
+
+commit 2a65ae1db95148fdab35f741a9fe44a993b0f856
+Author: LeZhuck <101577633+LeZhuck@users.noreply.github.com>
+Date:   Tue Dec 13 22:11:07 2022 +0100
+
+    feat : correction bugg update profile
+
+commit 847895933d6a31ab58b80e5c99f8334059530904
+Merge: bf9d502 957304f
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Tue Dec 13 21:07:38 2022 +0100
+
+    Merge branch 'main' of https://github.com/RXT-Eago/Projet-Web-Trading-Training
+
+commit bf9d502059ef123a1b260ae5904ed3ee76314a27
+Author: RXT-Eago <clement.delbarre@edu.ece.fr>
+Date:   Tue Dec 13 21:02:50 2022 +0100
+
+    feat: amélioration menu Home
+
+commit 957304f70f448aee993ef424bc70d413f3750693
+Author: LeZhuck <101577633+LeZhuck@users.noreply.github.com>
+Date:   Tue Dec 13 14:39:24 2022 +0100
+
+    feat : a user can modify his blogs and delete them
+
+commit 69e3049753c8c7c5bf9c0759c2602ce2611e6c71
+Author: LeZhuck <101577633+LeZhuck@users.noreply.github.com>
+Date:   Tue Dec 13 02:17:59 2022 +0100
+
+    feat : delete and edit comments added
+
+commit f94407d99d6720a17242347620cd3566264e1324
+Author: LeZhuck <101577633+LeZhuck@users.noreply.github.com>
+Date:   Tue Dec 13 01:26:24 2022 +0100
+
+    feat : project restart
+
+commit 1099481d3809c692b92ab615fc5a0c0e8fc7ff7c
+Author: Clement Delbarre <58074790+RXT-Eago@users.noreply.github.com>
+Date:   Tue Dec 13 01:14:28 2022 +0100
+
+    Delete LICENSE
+
+commit 7cb9492828023eca18da974be5aef1a0ea90500e
+Author: Clement Delbarre <58074790+RXT-Eago@users.noreply.github.com>
+Date:   Tue Dec 13 01:14:06 2022 +0100
+
+    Initial commit

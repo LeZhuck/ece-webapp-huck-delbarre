@@ -1,0 +1,26 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/trading-training/node_modules
+/trading-training/.pnp
+/trading-training/.pnp.js
+
+# testing
+/trading-training/coverage
+
+# next.js
+/trading-training/.next/
+/trading-training/out/
+
+# production
+/trading-training/build
+
+# local env files
+/trading-training/.env*.local
+
+# vercel
+/trading-training/.vercel
+
+# typescript
+/trading-training/*.tsbuildinfo
+/trading-training/next-env.d.ts
